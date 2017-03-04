@@ -33,7 +33,8 @@ gulp.task('pages', () => {
     .pipe(panini({
       root: 'src/views/pages/',
       layouts: 'src/views/layouts/',
-      partials: 'src/views/partials/'
+      partials: 'src/views/partials/',
+      data: 'src/views/data/'
     }))
     .pipe(gulp.dest('dist'));
 });
@@ -109,9 +110,9 @@ gulp.task('server', ['build'], (done) => {
 		server: {
 			baseDir: "dist"
 		},
-			port: 4567,
-			reloadDelay: 1500,
-			reloadDebounce: 1500
+			port: 4567
+			// reloadDelay: 1500,
+			// reloadDebounce: 1500
 	});
 	done();
 });

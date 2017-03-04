@@ -5,13 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{{#if title}}{{title}}{{else}}huleos 1.0.0{{/if}}</title>
-		<link href="assets/img/favicon.png" type="image/png" rel="icon">
-		<link href="assets/css/style.css" rel="stylesheet">
+		<meta name="description" content="{{description}}">
+		<link rel="canonical" href="{{site.url}}{{permalink}}">
+		<link href="{{root}}assets/img/favicon.png" type="image/png" rel="icon">
+		<link href="{{root}}assets/css/style.css" rel="stylesheet">
 	</head>
 	<body id="{{ body_id }}">
-		{{> header}}
-		{{> body}}
+		<div class="container">
+			{{> header}}
+			<div class="content">
+			{{> body}}
+			</div>
+		</div>
 		{{> footer}}
-		<script src="assets/js/bundle.js"></script>
+		<script src="{{root}}assets/js/bundle.js"></script>
 	</body>
 </html>
